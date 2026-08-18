@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tasks - VIP Task Earn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-header">
+        <div>
+            <span class="greeting">📋</span>
+            <span class="user-name">Daily Tasks</span>
+        </div>
+        <button onclick="window.location.href='index.html'" class="btn-back">← Back</button>
+    </div>
+
+    <div class="app-content">
+        <!-- Progress -->
+        <div class="section-card">
+            <h3>Today's Tasks</h3>
+            <div class="task-progress">
+                <span id="taskCount">0/0</span>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="section-card" id="quizSection">
+            <h3>❓ Answer the Question</h3>
+            <div id="questionArea">
+                <p id="questionText" style="font-size:20px; font-weight:bold; color:#ffd700; text-align:center; padding:15px 0;">
+                    Loading question...
+                </p>
+                <div class="form-group">
+                    <label>Your Answer</label>
+                    <input type="text" id="answerInput" placeholder="Type your answer here..." />
+                </div>
+                <button onclick="checkAnswer()" class="btn-task" id="submitAnswerBtn">✅ Submit Answer</button>
+                <p id="answerMessage" class="task-message"></p>
+            </div>
+        </div>
+
+        <!-- Level Warning (for Rox 0) -->
+        <div id="levelWarning" style="display:none; text-align:center; color:#ff6b6b; padding:20px; background:rgba(255,0,0,0.1); border-radius:12px; margin-bottom:16px;">
+            <p style="font-size:16px;">⚠️ You need a VIP level (Rox 1+) to earn money.</p>
+            <p style="font-size:14px; color:#aaa; margin-top:5px;">Visit the <strong style="color:#ffd700;">VIP</strong> page to upgrade.</p>
+        </div>
+
+        <!-- Earnings Summary -->
+        <div class="section-card">
+            <h3>📊 Your Earnings</h3>
+            <div class="earnings-grid">
+                <div>
+                    <span class="label">Daily</span>
+                    <span id="dailyEarn">₦0</span>
+                </div>
+                <div>
+                    <span class="label">Weekly</span>
+                    <span id="weeklyEarn">₦0</span>
+                </div>
+                <div>
+                    <span class="label">Monthly</span>
+                    <span id="monthlyEarn">₦0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
