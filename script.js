@@ -1,5 +1,5 @@
 // ===== SUPABASE CONFIGURATION =====
-const SUPABASE_URL = 'https://knksfzlpkgnmhboxiczq.supabase.co';
+const SUPABASE_URL = const SUPABASE_URL = 'https://knksfzlpkgnmhboxiczq.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_VWt0y4dI2dc5F9l3TAP0pw_MDr9_hd8';
 
 // ===== ADMIN CONFIGURATION =====
