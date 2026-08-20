@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Register - VIP Task Earn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📝 Create Account</h2>
+        <p style="text-align:center; color:#aaa; font-size:14px; margin-bottom:20px;">
+            You'll start at <strong style="color:#ff6b6b;">Rox 0</strong> (deposit to upgrade)
+        </p>
+        
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="regFullName" placeholder="John Doe" />
+        </div>
+        
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="john@gmail.com" />
+        </div>
+        
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" id="regPhone" placeholder="+2348012345678" />
+        </div>
+        
+        <div class="form-group">
+            <label>User ID (choose unique name)</label>
+            <input type="text" id="regUserId" placeholder="john_123" />
+        </div>
+        
+        <button onclick="registerUser()" class="btn-primary">Register</button>
+        <button onclick="window.location.href='login.html'" class="btn-secondary" style="margin-top:10px;">
+            Back to Login
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
