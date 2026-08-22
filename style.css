@@ -614,3 +614,133 @@ details summary:hover {
 textarea {
     font-family: inherit;
 }
+/* ============================================
+   WHATSAPP POPUP
+   ============================================ */
+
+/* Overlay - covers the whole screen */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+/* Popup box */
+.popup-box {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    padding: 35px 28px 25px;
+    border-radius: 24px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
+    position: relative;
+    animation: popupFade 0.5s ease;
+}
+
+/* Popup animation */
+@keyframes popupFade {
+    0% {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close button (top right) */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.popup-close:hover {
+    color: #fff;
+}
+
+/* Icon */
+.popup-icon {
+    font-size: 48px;
+    margin-bottom: 6px;
+}
+
+/* Heading */
+.popup-box h2 {
+    color: #ffd700;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.popup-box p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Benefits list */
+.popup-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 16px;
+    text-align: left;
+}
+.popup-list li {
+    color: #ccc;
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.popup-list li:last-child {
+    border-bottom: none;
+}
+
+/* Join button */
+.popup-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.popup-btn:active {
+    transform: scale(0.96);
+}
+
+/* Maybe Later button */
+.popup-later {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 6px 16px;
+    transition: 0.3s;
+}
+.popup-later:hover {
+    color: #aaa;
+}
