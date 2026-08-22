@@ -1116,3 +1116,14 @@ function joinWhatsApp() {
     window.open(link, '_blank');
     closePopup();
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const page = window.location.pathname.split('/').pop();
+
+    // --- Show popup only on dashboard ---
+    if (page === 'index.html' || page === '') {
+        showPopup();
+    }
+
+    // --- Rest of your existing code ---
+    // (your login check, loadUserData, etc.)
+});
