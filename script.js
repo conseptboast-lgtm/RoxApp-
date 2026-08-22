@@ -1086,3 +1086,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+// ============================================
+// WHATSAPP POPUP
+// ============================================
+
+// Show popup (only once per day)
+function showPopup() {
+    const lastSeen = localStorage.getItem('whatsappPopup');
+    const today = getToday();
+
+    if (lastSeen !== today) {
+        setTimeout(function() {
+            const popup = document.getElementById('whatsappPopup');
+            if (popup) popup.style.display = 'flex';
+        }, 3000);
+    }
+}
+
+// Close popup
+function closePopup() {
+    const popup = document.getElementById('whatsappPopup');
+    if (popup) popup.style.display = 'none';
+    localStorage.setItem('whatsappPopup', getToday());
+}
+
+// Join WhatsApp Group
+function joinWhatsApp() {
+    const link = 'https://chat.whatsapp.com/FV6rtPNGaag0e7C44T4BWb';
+    window.open(link, '_blank');
+    closePopup();
+}
