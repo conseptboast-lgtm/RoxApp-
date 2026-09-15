@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Withdraw - VIP Task Earn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-header">
+        <div>
+            <span class="greeting">💸</span>
+            <span class="user-name">Withdraw</span>
+        </div>
+        <button onclick="window.location.href='index.html'" class="btn-back">← Back</button>
+    </div>
+
+    <div class="app-content">
+        <div class="section-card">
+            <h3>💰 Your Balance</h3>
+            <p style="font-size:28px; font-weight:bold; color:#4CAF50;" id="withdrawBalance">₦0.00</p>
+        </div>
+
+        <div class="section-card">
+            <h3>📝 Withdrawal Details</h3>
+            <div class="form-group">
+                <label>Bank Name</label>
+                <input type="text" id="withdrawBank" placeholder="e.g., GTBank" />
+            </div>
+            <div class="form-group">
+                <label>Account Number</label>
+                <input type="text" id="withdrawAccount" placeholder="0123876895" />
+            </div>
+            <div class="form-group">
+                <label>Account Name</label>
+                <input type="text" id="withdrawAccountName" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+                <label>Amount to Withdraw</label>
+                <input type="number" id="withdrawAmount" placeholder="Enter amount" />
+            </div>
+            <button onclick="requestWithdrawal()" class="btn-withdraw">💸 Request Withdrawal</button>
+            <p id="withdrawMessage" class="task-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a886fabc68c8a344578d975/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
