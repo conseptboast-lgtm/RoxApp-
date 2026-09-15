@@ -614,3 +614,24 @@ details summary:hover {
 textarea {
     font-family: inherit;
 }
+.btn-telegram {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #0088cc, #00aaff);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-family: inherit;
+    box-shadow: 0 8px 24px rgba(0, 136, 204, 0.35);
+}
+.btn-telegram:active {
+    transform: scale(0.97);
+    background: linear-gradient(135deg, #006699, #0088cc);
+}
