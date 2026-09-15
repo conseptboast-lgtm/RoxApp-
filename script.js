@@ -7,7 +7,6 @@ const SUPABASE_ANON_KEY = 'sb_publishable_VWt0y4dI2dc5F9l3TAP0pw_MDr9_hd8';
 // ============================================================
 // ===== ADMIN CONFIGURATION =====
 // ============================================================
-const ADMIN_WHATSAPP = '7045836445';
 const ADMIN_BANK = '3083245519';
 const ADMIN_BANK_NAME = 'First bank';
 const ADMIN_ACCOUNT_NAME = 'Doris Isawode';
@@ -185,7 +184,7 @@ async function registerUser() {
                         })
                     });
                     
-                    // Give new user ₦200 bonus
+                    // Give new user ₦50 bonus
                     await fetch(`${SUPABASE_URL}/rest/v1/Users?userId=eq.${userId}`, {
                         method: 'PATCH',
                         headers: {
@@ -199,7 +198,7 @@ async function registerUser() {
                         })
                     });
                     
-                    alert('🎉 You were referred! You got ₦200 bonus!');
+                    alert('🎉 You were referred! You got ₦50 bonus!');
                 } catch (e) {
                     console.log('Referral bonus failed, continuing...');
                 }
@@ -486,10 +485,7 @@ async function applyForLevel(levelName, cost) {
             `Bank: ${ADMIN_BANK_NAME}\n` +
             `Account: ${ADMIN_BANK}\n` +
             `Name: ${ADMIN_ACCOUNT_NAME}\n\n` +
-            `Then send a message on WhatsApp with your User ID and amount.`
-        );
-        window.open(`https://wa.me/234${ADMIN_WHATSAPP}`, '_blank');
-    }
+           
 }
 
 // ============================================================
@@ -530,7 +526,7 @@ async function submitDepositRequest() {
         });
         
         if (response.ok) {
-            document.getElementById('depositMessage').textContent = '✅ Deposit request submitted! Contact admin on WhatsApp.';
+            document.getElementById('depositMessage').textContent = '✅ Deposit request submitted! Contact admin on telegram.';
             document.getElementById('depositMessage').style.color = '#4CAF50';
         } else {
             const error = await response.text();
@@ -631,7 +627,7 @@ function shareReferral() {
         if (navigator.share) {
             navigator.share({
                 title: 'Join VIP Task Earn!',
-                text: `🎉 Use my referral code ${codeEl.textContent} and get ₦200 bonus!`,
+                text: `🎉 Use my referral code ${codeEl.textContent} and get ₦50 bonus!`,
                 url: url
             });
         } else {
@@ -1087,17 +1083,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 // ============================================
-// WHATSAPP POPUP
+// TELEGRAM POPUP
 // ============================================
 
 // Show popup (only once per day)
 function showPopup() {
-    const lastSeen = localStorage.getItem('whatsappPopup');
+    const lastSeen = localStorage.getItem('telegramPopup');
     const today = getToday();
 
     if (lastSeen !== today) {
         setTimeout(function() {
-            const popup = document.getElementById('whatsappPopup');
+            const popup = document.getElementById('telegramPopup');
             if (popup) popup.style.display = 'flex';
         }, 3000);
     }
@@ -1105,13 +1101,13 @@ function showPopup() {
 
 // Close popup
 function closePopup() {
-    const popup = document.getElementById('whatsappPopup');
+    const popup = document.getElementById('telegramPopup');
     if (popup) popup.style.display = 'none';
-    localStorage.setItem('whatsappPopup', getToday());
+    localStorage.setItem('telegramPopup', getToday());
 }
 
-// Join WhatsApp Group
-function joinWhatsApp() {
+// Join Telegram Group
+function joinTelegram() {
     const link = 'https://chat.whatsapp.com/FV6rtPNGaag0e7C44T4BWb';
     window.open(link, '_blank');
     closePopup();
