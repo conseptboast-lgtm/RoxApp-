@@ -8,8 +8,8 @@ const SUPABASE_ANON_KEY = 'sb_publishable_VWt0y4dI2dc5F9l3TAP0pw_MDr9_hd8';
 // ===== ADMIN CONFIGURATION =====
 // ============================================================
 const ADMIN_WHATSAPP = '7045836445';
-const ADMIN_BANK = '3083245519';
-const ADMIN_BANK_NAME = 'First bank';
+const ADMIN_BANK = '8909444921';
+const ADMIN_BANK_NAME = 'Palmpay buisness';
 const ADMIN_ACCOUNT_NAME = 'Doris Isawode';
 
 // ============================================================
@@ -486,9 +486,9 @@ async function applyForLevel(levelName, cost) {
             `Bank: ${ADMIN_BANK_NAME}\n` +
             `Account: ${ADMIN_BANK}\n` +
             `Name: ${ADMIN_ACCOUNT_NAME}\n\n` +
-            `Then send a message on WhatsApp with your User ID and amount.`
+            `Then send a message on Telegram with your User ID and amount.`
         );
-        window.open(`https://wa.me/234${ADMIN_WHATSAPP}`, '_blank');
+        window.open('https://t.me/Aeoncharle', '_blank');
     }
 }
 
@@ -598,15 +598,18 @@ async function sendSupportMessage() {
 // ============================================================
 // ===== OPEN LIVE CHAT =====
 // ============================================================
+// ============================================
+// ==== OPEN LIVE CHAT ====
+// ============================================
 function openLiveChat() {
     // Try Tawk.to first
     if (typeof Tawk_API !== 'undefined' && Tawk_API) {
         Tawk_API.toggle();
         Tawk_API.maximize();
     } else {
-        // Fallback: Open WhatsApp
-        if (confirm('Chat not loading? Open WhatsApp instead?')) {
-            window.open(`https://wa.me/234${ADMIN_WHATSAPP}`, '_blank');
+        // Fallback: Open Telegram
+        if (confirm('Chat not loading? Open Telegram instead?')) {
+            window.open('https://t.me/Aeoncharle', '_blank');
         }
     }
 }
