@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Referrals - VIP Task Earn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-header">
+        <div>
+            <span class="greeting">🤝</span>
+            <span class="user-name">Refer & Earn</span>
+        </div>
+        <button onclick="window.location.href='index.html'" class="btn-back">← Back</button>
+    </div>
+
+    <div class="app-content">
+        <!-- Your Referral Code -->
+        <div class="section-card">
+            <h3>🔑 Your Referral Code</h3>
+            <div style="text-align:center; padding:15px;">
+                <p style="font-size:32px; font-weight:bold; color:#ffd700; letter-spacing:4px;" id="myReferralCode">
+                    LOADING...
+                </p>
+                <div style="display:flex; gap:10px;">
+                    <button onclick="copyReferralCode()" class="btn-copy" style="flex:1;">📋 Copy Code</button>
+                    <button onclick="shareReferral()" class="btn-share" style="flex:1;">📤 Share Link</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referral Stats -->
+        <div class="section-card">
+            <h3>📊 Your Referral Stats</h3>
+            <div class="referral-stats">
+                <div class="stat-item">
+                    <span class="stat-label">👤 Total Referrals</span>
+                    <span id="totalReferrals" style="font-size:24px; font-weight:bold; color:#4CAF50;">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">💰 Referral Earnings</span>
+                    <span id="referralEarnings" style="font-size:24px; font-weight:bold; color:#ffd700;">₦0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="section-card">
+            <h3>💡 How It Works</h3>
+            <ul style="color:#ccc; font-size:14px; padding-left:20px;">
+                <li>📤 Share your referral code with friends</li>
+                <li>👤 Friend registers using your code</li>
+                <li>🎁 Friend gets <strong style="color:#4CAF50;">₦200</strong> bonus immediately</li>
+                <li>💰 You get <strong style="color:#ffd700;">10%</strong> of their first deposit</li>
+                <li>🏆 Both of you win! 🎉</li>
+            </ul>
+        </div>
+
+        <!-- Referral History -->
+        <div class="section-card">
+            <h3>📋 Referral History</h3>
+            <div id="referralHistory">
+                <p style="color:#666; text-align:center;">No referrals yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a886fabc68c8a344578d975/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
