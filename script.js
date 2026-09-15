@@ -488,9 +488,27 @@ async function applyForLevel(levelName, cost) {
             `Name: ${ADMIN_ACCOUNT_NAME}\n\n` +
             `Then send a message on Telegram with your User ID and amount.`
         );
-        window.open('https://t.me/Aeoncharle', '_blank');
+       // ============================================
+// ==== OPEN TELEGRAM ====
+// ============================================
+function openTelegram() {
+    const username = 'Aeoncharle';
+    const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Try the Telegram app first
+        window.location.href = `tg://resolve?domain=${username}`;
+
+        // Fallback to web after 1.2s
+        setTimeout(function() {
+            window.location.href = `https://t.me/${username}`;
+        }, 1200);
+    } else {
+        // Desktop
+        window.open(`https://t.me/${username}`, '_blank');
     }
 }
+    
 
 // ============================================================
 // ===== SUBMIT DEPOSIT REQUEST =====
